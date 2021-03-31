@@ -3,7 +3,6 @@ package model;
 public class Client {
     private static int numberClients = 0;
     private final int clientID;
-    private int medicID;
     private String firstName;
     private String lastName;
     private int age;
@@ -15,10 +14,9 @@ public class Client {
         clientID = numberClients;
     }
 
-    public Client(int medicID, String firstName, String lastName, int age, int weight, double height){
+    public Client(String firstName, String lastName, int age, int weight, double height){
         numberClients++;
         clientID = numberClients;
-        this.medicID = medicID;
         this.firstName = firstName;
         this.lastName = lastName;
         this.age = age;
@@ -29,14 +27,6 @@ public class Client {
 
     public int getClientID(){
         return clientID;
-    }
-
-    public int getMedicID(){
-        return medicID;
-    }
-
-    public void setMedicID(int medicID){
-        this.medicID = medicID;
     }
 
     public String getFirstName(){
@@ -81,7 +71,7 @@ public class Client {
 
     @Override
     public String toString()    {
-        return this.firstName + " " + this.lastName + " " + this.clientID + " " + this.medicID + " " + this.age + " " + this.height + " " + this.weight;
+        return this.firstName + " " + this.lastName + " " + this.clientID + " " + this.age + " " + this.height + " " + this.weight;
     }
 
 }
