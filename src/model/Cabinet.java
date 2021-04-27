@@ -17,6 +17,10 @@ public class Cabinet {
         this.adresa = adresa;
     }
 
+    public int getCabinetID(){
+        return cabinetID;
+    }
+
     public void setAdresa(String adresa){
         this.adresa = adresa;
     }

@@ -25,6 +25,11 @@ public class Programare {
         this.ora = ora;
         this.data = data;
     }
+
+    public int getProgramareID(){
+        return programareID;
+    }
+
     public int getClientID(){
         return clientID;
     }
